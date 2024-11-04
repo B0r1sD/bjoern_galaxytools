@@ -3,6 +3,12 @@
     <macros>
         <import>macros.xml</import>
     </macros>
+        <edam_topics>
+        <edam_topic>topic_3383</edam_topic>
+    </edam_topics>
+    <edam_operations>
+        <edam_operation>operation_2422</edam_operation>
+    </edam_operations>
     <expand macro="requirements" />
     <command detect_errors="aggressive">
 <![CDATA[
@@ -14,8 +20,11 @@
 ]]>
     </command>
     <inputs>
-    <param name="mode" type="text" label="Storage mode" help="The storage mode, can be either nfs or fire."/>
-    <param name="path" type="text" label="The path of accession. e.g. S-BIAD/570/S-BIAD570 "/>
+        <param name="mode" type="select" label="Storage mode" help="The storage mode, can be either nfs or fire.">
+            <option value="nfs">NFS</option>
+            <option value="fire">Fire</option>
+        </param>
+        <param name="path" type="text" label="The path of accession. (e.g. S-BIAD/570/S-BIAD570)"/>
         <param name="ftplink_output" type="boolean" label="Generate FTP links?" help="If set, a file containing FTP links associated with the accession will be generated." />
     </inputs>
     <outputs>
