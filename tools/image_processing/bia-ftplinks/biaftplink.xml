@@ -20,12 +20,12 @@
 ]]>
     </command>
     <inputs>
-        <param name="mode" type="select" label="Storage mode" help="The storage mode, can be either nfs or fire.">
+        <param name="mode" type="select" label="Storage mode" help="The storage mode, can be either nfs or fire." optional="false">
             <option value="nfs">NFS</option>
             <option value="fire">Fire</option>
         </param>
-        <param name="path" type="text" label="The path of accession. (e.g. S-BIAD/570/S-BIAD570)"/>
-        <param name="ftplink_output" type="boolean" label="Generate FTP links?" help="If set, a file containing FTP links associated with the accession will be generated." />
+        <param name="path" type="text" label="The path of accession. (e.g. S-BIAD/570/S-BIAD570)" optional="false"/>
+        <param name="ftplink_output" type="boolean" label="Generate FTP links?" help="If set, a file containing FTP links associated with the accession will be generated." optional="false"/>
     </inputs>
     <outputs>
         <data name="images" format="tiff">
