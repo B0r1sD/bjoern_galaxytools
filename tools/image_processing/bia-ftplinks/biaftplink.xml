@@ -21,10 +21,10 @@
     </command>
     <inputs>
         <param name="mode" type="select" label="Storage mode" help="The storage mode, can be either nfs or fire." optional="false">
-            <option value="nfs">NFS</option>
+            <option value="nfs" selected="true">NFS</option>
             <option value="fire">Fire</option>
         </param>
-        <param name="path" type="text" label="The path of accession. (e.g. S-BIAD/570/S-BIAD570)" optional="false"/>
+        <param name="path" type="text" label="The path of accession. (e.g. S-BIAD/570/S-BIAD570)" optional="false" help="All publically available data in the BioImage Archive are accessible via <![CDATA[<a href='https://www.ebi.ac.uk/biostudies/BioImages/studies'>link</a>]]>. Each study is associated with a unique accession number."/>
         <param name="ftplink_output" type="boolean" label="Generate FTP links?" help="If set, a file containing FTP links associated with the accession will be generated." optional="false"/>
     </inputs>
     <outputs>
